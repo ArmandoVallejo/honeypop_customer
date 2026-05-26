@@ -17,6 +17,9 @@
         <li v-if="isAuthenticated">
           <RouterLink to="/atencion" class="nav-link" :class="{ 'nav-link-active': $route.path === '/atencion' }">Atención</RouterLink>
         </li>
+        <li v-if="isAuthenticated">
+          <RouterLink to="/facturacion" class="nav-link" :class="{ 'nav-link-active': $route.path === '/facturacion' }">Facturación</RouterLink>
+        </li>
         <li v-if="!isAuthenticated">
           <RouterLink to="/ubicacion" class="nav-link" :class="{ 'nav-link-active': $route.path === '/ubicacion' }">Ubicación</RouterLink>
         </li>
@@ -74,6 +77,7 @@
           <li v-if="isAuthenticated"><RouterLink to="/menu" @click="menuOpen = false" class="nav-link block">Menú</RouterLink></li>
           <li v-if="isAuthenticated"><RouterLink to="/promociones" @click="menuOpen = false" class="nav-link block">Promociones</RouterLink></li>
           <li v-if="isAuthenticated"><RouterLink to="/atencion" @click="menuOpen = false" class="nav-link block">Atención</RouterLink></li>
+          <li v-if="isAuthenticated"><RouterLink to="/facturacion" @click="menuOpen = false" class="nav-link block">Facturación</RouterLink></li>
           <li v-if="!isAuthenticated"><RouterLink to="/ubicacion" @click="menuOpen = false" class="nav-link block">Ubicación</RouterLink></li>
           <li v-if="!isAuthenticated"><RouterLink to="/contacto" @click="menuOpen = false" class="nav-link block">Contacto</RouterLink></li>
           <li v-if="isAuthenticated">
