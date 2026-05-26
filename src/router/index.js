@@ -11,6 +11,7 @@ import CheckoutSuccessView from '@/views/CheckoutSuccessView.vue'
 import CartView from '@/views/CartView.vue'
 import PromocionesView from '@/views/PromocionesView.vue'
 import AttentionView from '@/views/AttentionView.vue'
+import BillingView from '@/views/BillingView.vue'
 import { useAuth } from '@/composables/useAuth'
 
 const router = createRouter({
@@ -83,6 +84,12 @@ const router = createRouter({
       path: '/atencion',
       name: 'atencion',
       component: AttentionView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/facturacion',
+      name: 'facturacion',
+      component: BillingView,
       meta: { requiresAuth: true },
     }
   ],
